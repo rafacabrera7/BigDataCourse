@@ -73,11 +73,3 @@ end_time = time.time()
 print('-----------------------------------------\n')
 print("Tiempo de ejecución: ", end_time - start_time)
 print('\n-----------------------------------------')
-
-"""
-f = open("1_out2.txt", "w") 
-final_list = year_sector_volume.collect()
-for res in final_list:
-    f.write(str(res[0]) + "," + str(res[1]) + "\n")
-f.close()
-"""
