@@ -19,7 +19,7 @@ df = df.withColumn("Genres", regexp_replace(col("Genres"), "\[|\]", ""))
 
 # Quitamos la k que acompaña el valor en la columna Playing
 # lo convertimos a entero y si tiene k se multiplica por 1000
-df = df.withColumn("CurrentPlaying", when(col("Playing").contains("K"), (regexp_replace(col("Playing"), "K", ""). \
-                                   cast("float") * 1000)))
+df = df.withColumn("CurrentPlaying", when(col("Playing").contains("K"), (regexp_replace(col("Playing"), "K", "").cast("float") * 1000))
+                            .otherwise(col("Playing").cast("int")))
 
 df.select(concat_ws(", ", col("Genres"), col("Playing"), col("Title")).alias("Info")).show(truncate=False)
