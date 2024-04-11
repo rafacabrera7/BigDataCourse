@@ -22,4 +22,6 @@ df = df.withColumn("Genres", regexp_replace(col("Genres"), "\[|\]", ""))
 df = df.withColumn("CurrentPlaying", when(col("Playing").contains("K"), (regexp_replace(col("Playing"), "K", "").cast("float") * 1000))
                             .otherwise(col("Playing").cast("int")))
 
+df1 = df1.select(col("CurrentPlaying"), explode(col("")).alias("genre"))
+
 df.select(concat_ws(", ", col("Genres"), col("Playing"), col("Title")).alias("Info")).show(truncate=False)
