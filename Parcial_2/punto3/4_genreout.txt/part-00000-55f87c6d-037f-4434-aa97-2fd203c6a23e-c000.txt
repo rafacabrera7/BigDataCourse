@@ -1,0 +1,12 @@
+It Takes Two,Puzzle,999.0
+Super Smash Bros. Ultimate,Fighting,1200.0
+Fire Emblem: Three Houses,Tactical,1100.0
+League of Legends,MOBA,1200.0
+Persona 5 Royal,Turn Based Strategy,2300.0
+Stardew Valley,Simulator,2000.0
+Hades,Brawler,3200.0
+Fall Guys,Sport,654.0
+Inscryption,Card & Board Game,557.0
+Cuphead,Arcade,1200.0
+Mario Kart 8 Deluxe,Racing,705.0
+Pokémon Pinball: Ruby & Sapphire,Pinball,23.0

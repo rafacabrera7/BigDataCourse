@@ -1,0 +1,12 @@
+Hi-Fi Rush,Music,866.0
+Stardew Valley,Strategy,2000.0
+RimWorld,Real Time Strategy,142.0
+Red Dead Redemption 2,Shooter,1700.0
+Wordle,Quiz/Trivia,125.0
+Elden Ring,Adventure,3800.0
+Hades,Indie,3200.0
+Elden Ring,RPG,3800.0
+Persona 4 Golden,Visual Novel,1500.0
+Phoenix Wright: Ace Attorney,Point-and-Click,418.0
+Hollow Knight,Platform,2400.0
+Peggle Deluxe,,18.0

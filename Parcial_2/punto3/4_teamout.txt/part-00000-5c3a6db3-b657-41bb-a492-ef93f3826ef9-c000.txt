@@ -1,0 +1,333 @@
+Skate 3,EA Black Box,44.0
+The Legend of Zelda: Majora's Mask 3D,Nintendo EAD Tokyo,191.0
+Phoenix Wright: Ace Attorney,Nintendo Australia,418.0
+Pokémon Legends: Arceus,Game Freak,1600.0
+Crash Nitro Kart,Universal Interactive Studios,4.0
+Yume Nikki,DeNA Co.,155.0
+Firewatch,Campo Santo,99.0
+Sekiro: Shadows Die Twice,Activision,919.0
+Telling Lies,Furious Bee Limited,15.0
+Control,Remedy Entertainment,591.0
+Half-Life 2: Episode Two,CyberFront,43.0
+Chained Echoes,Ark Heiral,228.0
+Lies of P,Round8 Studio,0.0
+Ms. Pac-Man,General Computer Corporation (GCC),1.0
+Hyper Demon,Sorath,26.0
+The Artful Escape,Beethoven & Dinosaur,38.0
+Ruined King: A League of Legends Story,Airship Syndicate,63.0
+Star Wars: The Force Unleashed,THQ Wireless,50.0
+Just Cause 3,Avalanche Studios,93.0
+Mario Party 2,Hudson Soft,11.0
+Rez Infinite,Enhance Games,20.0
+God of War,SIE Santa Monica Studio,1100.0
+RimWorld,Ludeon Studios,142.0
+God of War: Chains of Olympus,Ready at Dawn,31.0
+Shenmue,Sega AM2,61.0
+Baldur's Gate 3,Larian Studios,79.0
+Deus Ex,Ion Storm,189.0
+Kingdom Come: Deliverance,Deep Silver,110.0
+SuperHot,SUPERHOT Team,95.0
+Hitman World of Assassination,Inlusio Interactive,47.0
+Undertale,8-4,679.0
+Dying Light 2: Stay Human,Techland Publishing,176.0
+Payday: The Heist,Overkill Software,4.0
+Final Fantasy VII,Square,1100.0
+Slender: The Eight Pages,Parsec Productions,3.0
+The Forgotten City,Modern Storyteller,53.0
+Project Zomboid,The Indie Stone,205.0
+Need for Speed: Heat,Ghost Games,100.0
+Rock Band 2,Harmonix Music Systems,10.0
+Teenage Mutant Ninja Turtles: Shredder's Revenge,Tribute Games,226.0
+Overwatch 2,Blizzard Entertainment,1100.0
+Brawlhalla,Blue Mammoth Games,146.0
+Super Meat Boy,Team Meat,153.0
+Witch on the Holy Night,Aniplex,104.0
+Fire Emblem: Three Houses,Ltd.,1100.0
+Mario & Luigi: Bowser's Inside Story,AlphaDream,95.0
+Hogwarts Legacy,Portkey Games,766.0
+Journey,ThatGameCompany,94.0
+Dusk,New Blood Interactive,154.0
+Crash Team Racing Nitro-Fueled,Beenox,50.0
+Katamari Damacy,NOW Production,60.0
+Psychonauts,Double Fine Productions,388.0
+Before Your Eyes,GoodbyeWorld Games,25.0
+Return to Monkey Island,Lucasfilm Games,71.0
+Lisa,Dingaling,143.0
+Sonic Colors,SEGA of America,44.0
+Serial Experiments Lain,Pionner LDC,29.0
+Kingdom Hearts II,Buena Vista Games,137.0
+Downwell,Moppin,60.0
+Genshin Impact,miHoYo,2700.0
+Lies of P,NEOWIZ,0.0
+Cuphead,Studio MDHR,1200.0
+Genshin Impact,HoYoverse,2700.0
+Marvel Snap,nuverse,248.0
+VA-11 Hall-A: Cyberpunk Bartender Action,SUKEBAN,469.0
+Jazzpunk,Necrophone Games,5.0
+Luigi's Mansion 3,Next Level Games,313.0
+Outer Wilds,Mobius Digital,661.0
+Pokémon Unite,Timi,263.0
+Mortal Kombat 11,NetherRealm Studios,99.0
+Signalis,Humble Games,419.0
+Kirby Super Star Ultra,Nintendo of Europe,47.0
+Signalis,rose-engine,419.0
+Black Mesa,Crowbar Collective,200.0
+Pokémon Go,The Pokémon Company,575.0
+Fallout 3,ZeniMax Media,162.0
+Snake,Nokia,6.0
+SuperHot,IMGN.PRO,95.0
+Sniper Elite 4,Sold Out Sales & Marketing,40.0
+Street Fighter II,U.S. Gold,11.0
+Potion Craft,niceplay game,83.0
+Vampire Survivors,Poncle,944.0
+Cyberpunk 2077,CD Projekt RED,1500.0
+River City Girls,WayForward Technologies,96.0
+MultiVersus,Player First Games,341.0
+The Witcher,Atari,57.0
+Metro 2033 Redux,Koch Media,108.0
+Judgment,Ryu ga Gotoku Studios,358.0
+Digimon Survive,Witchcraft Inc.,148.0
+Lobotomy Corporation,Project Moon,132.0
+Crab Game,Dani,14.0
+Machinarium,Amanita Design,18.0
+Five Nights at Freddy's,Clickteam,46.0
+Pathologic 2,Ice-Pick Lodge,155.0
+BioShock 2,2K Marin,103.0
+F.E.A.R.,Vivendi Universal,65.0
+Fear & Hunger,Happy Paintings,39.0
+Roblox,Roblox Corporation,213.0
+Mass Effect Legendary Edition,EA,596.0
+Ikaruga,Treasure,37.0
+Nickelodeon All-Star Brawl,Ludosity,51.0
+Control,505 Games,591.0
+Altered Beast,Team Shinobi,2.0
+Shovel Knight: Treasure Trove,Yacht Club Games,186.0
+Ori and the Will of the Wisps,Moon Studios,263.0
+The King of Fighters '98,HAMSTER Corporation,15.0
+Scorn,Ebb Software,100.0
+Fallout: New Vegas,Obsidian Entertainment,756.0
+Remnant: From the Ashes,Gunfire Games,71.0
+The Witcher 3: Wild Hunt,WB Games,1200.0
+The Elder Scrolls V: Skyrim,Bethesda Game Studios,589.0
+Ape Escape 3,Sony Computer Entertainment Europe,24.0
+Pokémon Pinball: Ruby & Sapphire,Jupiter Corporation,23.0
+Another Pokémon Game,3D: Doom Daddy Digital,2.0
+Dusk,David Szymanski,154.0
+Goat Simulator,Coffee Stain Studios,22.0
+Limbo,Playdead,129.0
+Chibi-Robo!,Skip Ltd.,33.0
+Beyond Good & Evil,Ubisoft Shanghai,35.0
+NieR: Automata,PlatinumGames,1100.0
+Armored Core,Agetec,38.0
+Castle Crashers,The Behemoth,94.0
+Slither.io,Lowtech Studios,1.0
+Detroit: Become Human,Quantic Dream,216.0
+Tekken 3,Namco Hometek,13.0
+Chrome Dino,Google,122.0
+The Forest,Endnight Games Ltd,143.0
+Your Turn To Die: Death Game By Majority,0UP Games,241.0
+Hi-Fi Rush,Tango Gameworks,866.0
+Persona 5 Strikers,Omega Force,779.0
+Pac-Man,Namco Networks America,7.0
+Wanted: Dead,110 Industries,15.0
+Mount & Blade: Warband,Taleworlds,39.0
+Dead Space,Motive Studios,248.0
+Batman: Arkham Knight,Rocksteady Studios,279.0
+The Legend of Zelda: Breath of the Wild,Nintendo EPD Production Group No. 3,2500.0
+Nobody Saves the World,Drinkbox Studios,99.0
+Final Fantasy X/X-2 HD Remaster,Virtuos,281.0
+Chained Echoes,Deck13 Spotlight,228.0
+Terraria,Headup Games,673.0
+Tales of Symphonia,Namco Tales Studio,132.0
+Sonic Adventure 2,Sonic Team USA,89.0
+Pathologic 2,tinyBuild,155.0
+Pac-Man in a Tin,Fizz Creations,0.0
+Vagrant Story,(Archive) Square Product Development Division 4,59.0
+Ghost of Tsushima,Sucker Punch Productions,688.0
+Oxenfree,Night School Studio,70.0
+Lil Gator Game,Playtonic Friends,22.0
+The Witness,Inc,186.0
+Left 4 Dead,Certain Affinity,35.0
+Utawarerumono: Mask of Truth,Aquaplus,21.0
+Atomic Heart,Focus Entertainment,241.0
+FIFA 23,EA Sports,112.0
+Minecraft,Mojang Studios,1800.0
+Super Kiwi 64,Siactro,5.0
+Fate/stay night,TYPE-MOON,135.0
+System Shock,Origin Systems,29.0
+Blasphemous,Team17,399.0
+Deadly Premonition,Ignition Entertainment,48.0
+DmC: Devil May Cry,Ninja Theory,62.0
+Marvel's Guardians of the Galaxy,Eidos Montréal,432.0
+God of War III: Remastered,Red Kite Games,40.0
+Dying Light 2: Stay Human,Techland,176.0
+Valkyrie Elysium,Soleil,32.0
+Mario Kart 8,Nintendo EAD Group No. 1,40.0
+Rocket League,Psyonix,564.0
+Pokémon Rumble Blast,Ambrella,8.0
+Chivalry: Medieval Warfare,Torn Banner Studios,2.0
+Resident Evil 2,Capcom Development Division 1,585.0
+Rule of Rose,Punchline,33.0
+Keep Talking and Nobody Explodes,Steel Crate Games,26.0
+Stardew Valley,Chucklefish Games,2000.0
+Metal Gear Solid,Microsoft,287.0
+Dragon Quest,Armor Project,43.0
+Omori,PLAYISM,1100.0
+Crysis,Crytek Frankfurt,26.0
+The Simpsons Game,Griptonite Games,20.0
+Rain World,Videocult,170.0
+100% Orange Juice,Fruitbat Factory,51.0
+NieR,Cavia,67.0
+Immortality,Half Mermaid,95.0
+The Binding of Isaac: Rebirth,Inc.,334.0
+The Swapper,Curve Digital,10.0
+Sea of Thieves,Rare,270.0
+Enter the Gungeon,Dodge Roll,403.0
+Sid Meier's Civilization VI,Firaxis Games,211.0
+Uncharted: The Nathan Drake Collection,Inc. (SCEI),137.0
+Halo Infinite,343 Industries,632.0
+Batman: Arkham Origins,WB Games Montréal,125.0
+Kentucky Route Zero,Cardboard Computer,128.0
+Don't Starve Together,Klei Entertainment,173.0
+Need for Speed: Unbound,Criterion Games,74.0
+Prototype,Radical Entertainment,30.0
+The Walking Dead: Season Two,Skybound Games,35.0
+Bloodborne PSX,LW Media,16.0
+Bloodborne,Sony Computer Entertainment,1100.0
+It Takes Two,Hazelight Studios,999.0
+Fear & Hunger,Miro Haverinen,39.0
+Mario vs. Donkey Kong,Nintendo Software Technology,16.0
+WWE SmackDown vs. Raw 2008,Ltd.",1.0
+Fall Guys,Mediatonic,654.0
+A Hat in Time,Humble Bundle,320.0
+Final Fantasy VII,Eidos Interactive,1100.0
+Killing Floor 2,Tripwire Interactive,33.0
+Better Call Saul Kart,Big Trash Games,1.0
+Rock Band 2,MTV Games,10.0
+Figment,Bedtime Digital Games,20.0
+Payday: The Heist,Daybreak Game Company,4.0
+Ib,kouri,13.0
+Assassin's Creed Origins,Ubisoft Montreal,302.0
+Moonscars,Black Mermaid,24.0
+Postal 2,Whiptail Interactive,67.0
+Paladins,Hi-Rez Studios,110.0
+Sonic the Hedgehog 2,Aspect Co. Ltd,6.0
+Muse Dash,X.D. Network Inc.,247.0
+The House in Fata Morgana,NOVECT,250.0
+Grand Theft Auto III,DMA Design,88.0
+The Messenger,Sabotage,157.0
+Fire Emblem: Three Houses,Intelligent Systems Co.,1100.0
+Gravity Rush 2,SIE Japan Studio,122.0
+The Jackbox Party Pack 3,Jackbox Games,17.0
+Fatal Frame II: Crimson Butterfly,Tecmo Co.,38.0
+Moonlighter,Digital Sun Games,134.0
+Lunistice,A Grumpy Fox,17.0
+Needy Streamer Overload,WSS playground,105.0
+Resident Evil 3: Nemesis,Capcom Planning Room 2,56.0
+Rain World,Adult Swim Games,170.0
+Silent Hill 2,Team Silent,282.0
+Super Hexagon,Distractionware,23.0
+Trek to Yomi,Leonard Menchiari,67.0
+The Witcher 3: Wild Hunt - Game of the Year Edition,CD Projekt,410.0
+The Missing: J.J. Macfield and the Island of Memories,White Owls Inc.,30.0
+Gris,Nomada Studio,227.0
+Batman: Arkham City,DC Entertainment,192.0
+Pac-Man,Wiz,7.0
+Abzu,Giant Squid,59.0
+Zero Escape: Nine Hours, Nine Persons, Nine Doors,Spike,162.0
+Katamari Damacy Reroll,MONKEYCRAFT Co. Ltd,199.0
+Touhou Koumakyou: The Embodiment of Scarlet Devil,Team Shanghai Alice,65.0
+EarthBound Beginnings,Ape,90.0
+Hades,Supergiant Games,3200.0
+Bit.Trip Runner,Gaijin Games,7.0
+Everhood,Surefire.Games,76.0
+Your Turn To Die: Death Game By Majority,Nankidai,241.0
+Destiny 2,Bungie,524.0
+Star Wars: Battlefront II,Pandemic Studios,35.0
+Metal Gear Solid 3: Snake Eater HD Edition,Konami Digital Entertainment,34.0
+Moonlighter,11 bit studios,134.0
+The Simpsons: Road Rage,Fox Interactive,6.0
+Audiosurf,Invisible Handlebar,8.0
+Until Dawn,Supermassive Games,85.0
+The Callisto Protocol,Krafton,62.0
+What Remains of Edith Finch,Giant Sparrow,61.0
+Marvel's Spider-Man,Insomniac Games,577.0
+Kingdom Come: Deliverance,Warhorse Studios,110.0
+Weird West,WolfEye Studios,46.0
+Another World,Virgin Interactive Entertainment (Europe) Ltd.,8.0
+Shantae and the Pirate's Curse,Intergrow,72.0
+S.T.A.L.K.E.R.: Shadow of Chernobyl,THQ,119.0
+Friday Night Funkin',ninja_muffin99,67.0
+Dead by Daylight,Starbreeze publishing AB,520.0
+Friday the 13th: The Game,Illfonic,12.0
+The Beginner's Guide,Everything Unlimited Ltd.,7.0
+Full Metal Daemon Muramasa,Nitroplus,96.0
+Outlast,Red Barrels,90.0
+Hotel Dusk: Room 215,Cing,87.0
+Fable II,Lionhead Studios,22.0
+Celeste,Maddy Makes Games,1200.0
+Kena: Bridge of Spirits,Ember Lab,204.0
+Bayonetta,Nex Entertainment,614.0
+Crash Bandicoot 4: It's About Time,Toys for Bob,293.0
+The Sims 4,The Sims Studio,434.0
+Pikmin 3,Nintendo EAD Software Development Group No.4,39.0
+Europa Universalis IV,Paradox Development Studio,76.0
+Bully: Scholarship Edition,Rockstar Toronto,92.0
+Sable,Shedworks,165.0
+World of Horror,panstasz,59.0
+Osu!,Dean "ppy" Herbert,426.0
+Lil Gator Game,Scott Slucher,22.0
+Ori and the Blind Forest,Microsoft Studios,260.0
+Marvel Snap,Second Dinner,248.0
+Brawlhalla,Ubisoft,146.0
+Resident Evil: Revelations,Tose,55.0
+Team Sonic Racing,Sumo Digital,49.0
+Superliminal,Pillow Castle Games,76.0
+Geometry Dash,RobTop Games,95.0
+Ghostrunner,One More Level,170.0
+Sonic Mania,PagodaWest Games,399.0
+Twelve Minutes,Luis Antonio,63.0
+Returnal,Housemarque,430.0
+Sonic Advance,Dimps,26.0
+BioShock Infinite,Irrational Games,197.0
+Superman: The New Superman Adventures,Titus Software,2.0
+Return to Monkey Island,Terrible Toybox,71.0
+Scott Pilgrim vs. the World: The Game - Complete Edition,Ubisoft Chengdu,102.0
+Bubble Bobble,Taito Corporation,3.0
+The Legend of Zelda: Breath of the Wild,Nintendo,2500.0
+Digimon World: Next Order,Bandai Namco Entertainment Europe,40.0
+Hitman 3,IO Interactive,242.0
+It Takes Two,Electronic Arts,999.0
+Wonderful Everyday: Down the Rabbit-Hole,Frontwing,127.0
+Moon: Remix RPG Adventure,Love-de-Lic,100.0
+Middle-earth: Shadow of Mordor,Monolith Productions,106.0
+Metal Gear Solid: The Twin Snakes,Silicon Knights,31.0
+Metro 2033 Redux,4A Games,108.0
+Borderlands 3,2K Games,356.0
+Tales of Berseria,Bandai Namco Entertainment America,293.0
+The Stanley Parable: Ultra Deluxe,Crows Crows Crows,141.0
+BioShock,2K Boston,339.0
+Faith: The Unholy Trinity,Airdorf Games,37.0
+Doom Eternal,id Software,738.0
+Evil West,Flying Wild Hog,38.0
+LEGO Batman 2: DC Super Heroes,Feral Interactive,41.0
+Stray,Annapurna Interactive,801.0
+Milk inside a bag of milk inside a bag of milk,Nikita Kaf Publishing,26.0
+Mega Man X5,Capcom Production Studio 3,11.0
+The King of Fighters XV,SNK Corporation,81.0
+Mario + Rabbids Sparks of Hope,Ubisoft Paris,145.0
+Persona 5 Royal,Atlus,2300.0
+A Short Hike,Whippoorwill,91.0
+Jet Set Radio Future,Smilebit,47.0
+Axiom Verge 2,Thomas Happ Games,20.0
+LEGO Builder's Journey,Light Brick Studio,22.0
+A Plague Tale: Innocence,Asobo Studio,202.0
+Higurashi: When They Cry,MangaGamer,97.0
+Stray,BlueTwelve Studio,801.0
+Judas,Ghost Story Games,0.0
+Somerville,Jumpship,20.0
+Rollerdrome,Roll7,57.0
+Kid Icarus: Uprising,Project Sora,140.0
+Crash Bandicoot N. Sane Trilogy,Vicarious Visions,364.0
+Broken Age,Double Fine,21.0
+Tomb Raider,Core Design,45.0
