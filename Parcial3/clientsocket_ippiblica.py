@@ -4,8 +4,8 @@ import socket
 #host = 'localhost'
 #port = 5050
 
-host = '0.tcp.ngrok.io'
-port = 16039
+host = '8.tcp.ngrok.io'
+port = 11832
 
 
 # Crear el socket del cliente
