@@ -41,9 +41,9 @@ if __name__ == "__main__":
     # (logsDF.timestamp) y se aplica la función explode() para convertir las palabras divididas en filas
     # separadas con la misma marca de tiempo.
     
-    data = spark.readStream.format("socket").option("host", '0.tcp.ngrok.io')\
+    data = spark.readStream.format("socket").option("host", '6.tcp.ngrok.io')\
             .option("multiLine",True)\
-            .option("port", 12990).load()
+            .option("port", 12160).load()
 
     data = data.withColumn("valores", split(data.value,','))
     """,Date Created,Number of Likes,Source of Tweet,Tweet,Sentiment"""

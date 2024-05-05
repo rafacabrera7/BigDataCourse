@@ -18,7 +18,7 @@ port = 5050
 # Lee el archivo
 # Ruta del archivo CSV a enviar
 
-archivo = 'fifa_world_cup_2022_tweets.csv'  
+archivo = './../Inputs/input_parcial3/fifa_world_cup_2022_tweets.csv'  
 delimitador = ','  # Delimitador utilizado en el archivo CSV
 
 
