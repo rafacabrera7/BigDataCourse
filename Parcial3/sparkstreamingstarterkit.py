@@ -12,7 +12,7 @@ import json
 from pyspark.sql import Row, SparkSession
 from pyspark.sql.streaming import DataStreamWriter, DataStreamReader
 from pyspark.sql.functions import explode ,split ,window
-from pyspark.sql.types import IntegerType, DateType, StringType, StructType
+from pyspark.sql.types import IntegerType, DateType, StringType, StructType, TimestampType
 from pyspark.sql.functions import sum,avg,max, col, count
 
 print()
@@ -32,8 +32,8 @@ if __name__ == "__main__":
     # Estas variables determinan la duración de la ventana y el deslizamiento
     # para el procesamiento de datos en tiempo real
     
-    windowDuration = '50 seconds'
-    slideDuration = '25 seconds'
+    windowDuration = '60 seconds'
+    #slideDuration = '25 seconds'
         
     # Set up the `logsDF` readStream to take in data from a socket stream, AND include the timestamp
     # Transformación de  los datos leídos. Se divide cada línea de registro en palabras utilizando split()
@@ -41,9 +41,9 @@ if __name__ == "__main__":
     # (logsDF.timestamp) y se aplica la función explode() para convertir las palabras divididas en filas
     # separadas con la misma marca de tiempo.
     
-    data = spark.readStream.format("socket").option("host", '6.tcp.ngrok.io')\
+    data = spark.readStream.format("socket").option("host", '0.tcp.ngrok.io')\
             .option("multiLine",True)\
-            .option("port", 12160).load()
+            .option("port", 18880).load()
 
     data = data.withColumn("valores", split(data.value,','))
     """,Date Created,Number of Likes,Source of Tweet,Tweet,Sentiment"""
@@ -59,33 +59,21 @@ if __name__ == "__main__":
     dataClean = dataClean.filter(col('id').rlike('^[0-9]+$'))
 
     ## Falta hacerle cast a la column date y luego agrupar por eso.
+    dataClean = dataClean.withColumn("date",col("date").cast(TimestampType()))
 
-    result = dataClean.groupBy().agg(count(col('id')).alias('count'), sum('likes'), avg('likes'))
+    #window(logsDF.timestamp, windowDuration, slideDuration),logsDF.hostname
+    result = dataClean.groupBy(window(dataClean.date, windowDuration, 0)).agg(count(col('id')).alias('count'), sum('likes'), avg('likes'))
+
+#    result = dataClean.groupBy(col("date")).agg(count(col('id')).alias('count'), sum('likes'), avg('likes'))
         
     # display all unbounded table completely while streaming the hostCountDF on console using output mode "complete"
 
-    query = dataClean.writeStream.outputMode("update")\
+    query = result.writeStream.outputMode("append")\
                        .option("truncate", "false")\
-                       .format("console")\
+                       .format("csv")\
+                       .option("path", "/home/rafa/Desktop/BigData/BigDataCourse/Parcial3")\
                        .start()
 
-    ## Practice and observe by uncommenting the below code lines using different outputModel "append" , "update"
-    
-    ### display unbounded table withonly the changes are appended
-    # query = hostCountsDF.writeStream.outputMode("append")\
-    #                    .option("numRows", "100000")\
-    #                    .option("truncate", "false")\
-    #                    .format("console")\
-    #                    .start()
-
-
-    ### display unbounded with only the update 
-    # query = hostCountsDF.writeStream.outputMode("update")\
-    #                    .option("numRows", "100000")\
-    #                    .option("truncate", "false")\
-    #                    .format("console")\
-    #                    .start()
-
-    
     #run the query 
-    query.awaitTermination()
+    query.awaitTermination(timeout = 40)
+    query.stop()
