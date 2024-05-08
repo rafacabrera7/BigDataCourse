@@ -71,7 +71,7 @@ if __name__ == "__main__":
     query = result.writeStream.outputMode("append")\
                        .option("truncate", "false")\
                        .format("csv")\
-                       .option("path", "/home/rafa/Desktop/BigData/BigDataCourse/Parcial3")\
+                       .option("path", "./")\
                        .start()
 
     #run the query 
