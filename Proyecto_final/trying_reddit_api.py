@@ -1,8 +1,6 @@
 import praw
 import time
 import re
-from bs4 import BeautifulSoup
-import markdown
 
 # Reddit API credentials
 client_id = 'NRnx0GZmntTbXO7Kk36MSg'
@@ -34,11 +32,8 @@ def fetch_comments(submission):
             cleaned_comments.append(comment_info)
     return cleaned_comments
 
-def fetch_new_posts(subreddit_name, limit=50, idx=None):
+def fetch_new_posts(subreddit_name, limit=50):
     """Fetch new posts from a subreddit."""
-    if idx is None:
-        idx = set()
-
     subreddit = reddit.subreddit(subreddit_name)
     new_posts = subreddit.new(limit=limit)
     
@@ -51,16 +46,15 @@ def fetch_new_posts(subreddit_name, limit=50, idx=None):
                 'comments': fetch_comments(post)
             }
             cleaned_posts.append(post_info)
-    return cleaned_posts, idx
+    return cleaned_posts
 
 def main():
     subreddit_name = 'videogames'  # Replace with your subreddit
     polling_interval = 10  # Poll every 10 seconds
-    idx = set()
 
     while True:
         print(f"Fetching new posts from r/{subreddit_name}...")
-        posts, idx = fetch_new_posts(subreddit_name, idx=idx)
+        posts = fetch_new_posts(subreddit_name)
         for post in posts:
             print(f"Title: {post['title']}")
             print(f"Content: {post['selftext']}")
