@@ -42,15 +42,15 @@ def fetch_new_posts(subreddit_name, limit=50):
         if post.selftext.strip():  # Check if selftext is not empty
             post_info = {
                 'title': post.title,
-                'selftext': clean_text(post.selftext),
-                'comments': fetch_comments(post)
+                'selftext': clean_text(post.selftext)
+                #'comments': fetch_comments(post)
             }
             cleaned_posts.append(post_info)
     return cleaned_posts
 
 def main():
     subreddit_name = 'videogames'  # Replace with your subreddit
-    polling_interval = 10  # Poll every 10 seconds
+    polling_interval = 1  # Poll every 10 seconds
 
     while True:
         print(f"Fetching new posts from r/{subreddit_name}...")
@@ -59,8 +59,8 @@ def main():
             print(f"Title: {post['title']}")
             print(f"Content: {post['selftext']}")
             print("Comments:")
-            for comment in post['comments']:
-                print(f"- {comment['comment_body']}\n")
+            #for comment in post['comments']:
+            #    print(f"- {comment['comment_body']}\n")
         
         print("Waiting for the next polling interval...")
         time.sleep(polling_interval)
