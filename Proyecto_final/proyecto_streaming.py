@@ -29,14 +29,17 @@ if __name__ == "__main__":
     
     windowDuration = '60 seconds'
     
-    data = spark.readStream.format("socket").option("host", '6.tcp.ngrok.io')\
-            .option("multiLine",True)\
-            .option("port", 13782).load()
+    data = spark.readStream.format("socket").option("host", 'localhost')\
+            .option("port", 5050).load()
 
-    #data.value
+    data = data.withColumn("valores", split(data.value,','))
+    
+    dataClean = data.withColumn('id', data['valores'].getItem(0)) \
+       .withColumn('content', data['valores'].getItem(1)) \
+        .drop(data['valores'])\
+        .drop(data['value'])
+    
 
-
-    data = data.groupby().agg(concat_ws("AAAAA", collect_list(data.value  )))
     """
     
     dataClean = data.withColumn('id', data['valores'].getItem(0)) \
@@ -52,23 +55,22 @@ if __name__ == "__main__":
 
     result = dataClean.groupBy(window(dataClean.date, windowDuration, 0)) \
                   .agg(count("id").alias("count"), sum("likes").alias("total_likes"), avg("likes").alias("avg_likes"))
-
-    def guardarBatch(df, batch):
-        df = df.withColumn("window", df["window"].cast(StringType())) \
-                     .withColumn("count", df["count"].cast(StringType())) \
-                     .withColumn("total_likes", df["total_likes"].cast(StringType())) \
-                     .withColumn("avg_likes", df["avg_likes"].cast(StringType()))
-        
-        df = df.select(concat_ws(",", *df.columns).alias("output_value"))
-        df.coalesce(1).write.text(f"s3://outputparcialstreaming/output/batch_{batch}")
     """
-    query = data.writeStream.queryName("queryProyectoFinal") \
+    def concatEnCadaBatch(df, batch):
+        df = df.groupby().agg(concat_ws("-------------------------------------------------",
+                                            collect_list(df.content)))
+        df.show(truncate=False)  # This will display the DataFrame in the terminal
+        #llamadoaLLM(celda)
+        #guardarrespuesta de llamado en S3
+        #df.coalesce(1).write.text(f"s3://outputparcialstreaming/output/batch_{batch}")
+    
+    query = dataClean.writeStream.queryName("queryProyectoFinal") \
                           .outputMode("update") \
                           .format("console") \
-                          .option("truncate", "false") \
-                          .start()
-                          #.foreachBatch(guardarBatch) \
-    
+                          .foreachBatch(concatEnCadaBatch) \
+                          .trigger(processingTime='20 seconds')\
+                          .option("truncate", "false").start()
+
     #run the query 
     query.awaitTermination(timeout = 100)
     query.stop()

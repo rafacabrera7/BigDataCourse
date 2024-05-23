@@ -1,11 +1,11 @@
 import socket
 
 # Configuración del servidor y puerto
-#host = 'localhost'
-#port = 5050
+host = 'localhost'
+port = 5050
 
-host = '4.tcp.ngrok.io'
-port = 19099
+#host = '0.tcp.ngrok.io'
+#port = 15997
 
 
 # Crear el socket del cliente
