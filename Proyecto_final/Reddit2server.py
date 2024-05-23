@@ -53,14 +53,15 @@ def send_line(line, client_socket):
 def manejar_cliente(client_socket, client_address):
     print(f"Cliente conectado desde {client_address}")
     subreddit_name = 'videogames'  # Replace with your subreddit
-    polling_interval = 10  # Poll every 10 seconds
+    polling_interval = 30  # Poll every 10 seconds
 
     try:
         while True:
             print(f"Fetching new posts from r/{subreddit_name}...")
             posts = fetch_new_posts(subreddit_name)
             for post in posts:
-                line = f"Title: {post['title']}\nContent: {post['selftext']}\n"
+                line = f"{post['title']} {post['selftext']}"
+                #line = "{"+line+"}"
                 send_line(line, client_socket)
                 print(f'Sent to {client_address}:\n{line}')
             print("Waiting for the next polling interval...")

@@ -5,7 +5,7 @@ import socket
 #port = 5050
 
 host = '6.tcp.ngrok.io'
-port = 15906
+port = 13782
 
 
 # Crear el socket del cliente
