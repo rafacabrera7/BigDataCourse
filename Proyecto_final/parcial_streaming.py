@@ -63,7 +63,7 @@ if __name__ == "__main__":
         df.coalesce(1).write.text(f"s3://outputparcialstreaming/output/batch_{batch}")
     """
     query = data.writeStream.queryName("queryProyectoFinal") \
-                          .outputMode("append") \
+                          .outputMode("update") \
                           .format("console") \
                           .option("truncate", "false") \
                           .start()
