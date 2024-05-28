@@ -7,17 +7,18 @@ import operator
 import boto3
 import json
 
-from pyspark.sql import Row, SparkSession
+from pyspark.sql import SparkSession
 from pyspark.sql.streaming import DataStreamWriter, DataStreamReader
-from pyspark.sql.functions import explode ,split ,window, concat_ws, collect_list
-from pyspark.sql.types import IntegerType, DateType, StringType, StructType, TimestampType
-from pyspark.sql.functions import sum,avg,max, col, count
+from pyspark.sql.functions import split, concat_ws, collect_list
+from pyspark.sql.types import IntegerType, DateType, StringType, StructType, TimestampType, StructField
+from pyspark.sql.functions import col, count, lit
 import time
 
 
 print()
 print("ESTE SÍ ES PROYECTO FINAL")
 print()
+
 if __name__ == "__main__":
     
     spark = SparkSession\
@@ -39,6 +40,7 @@ if __name__ == "__main__":
         .drop(data['valores'])\
         .drop(data['value'])
     
+    dataClean = dataClean.filter(col('content').isNotNull() & (col('content') != ""))
 
     """
     
@@ -57,8 +59,9 @@ if __name__ == "__main__":
                   .agg(count("id").alias("count"), sum("likes").alias("total_likes"), avg("likes").alias("avg_likes"))
     """
     def concatEnCadaBatch(df, batch):
-        df = df.groupby().agg(concat_ws("-------------------------------------------------",
+        df = df.groupby().agg(concat_ws("********************************************",
                                             collect_list(df.content)))
+
         df.show(truncate=False)  # This will display the DataFrame in the terminal
         #llamadoaLLM(celda)
         #guardarrespuesta de llamado en S3
@@ -68,7 +71,7 @@ if __name__ == "__main__":
                           .outputMode("update") \
                           .format("console") \
                           .foreachBatch(concatEnCadaBatch) \
-                          .trigger(processingTime='20 seconds')\
+                          .trigger(processingTime='10 seconds')\
                           .option("truncate", "false").start()
 
     #run the query 
