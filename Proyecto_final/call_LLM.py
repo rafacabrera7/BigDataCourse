@@ -17,7 +17,7 @@ def llm_response(user_input):
     prompt = f"{base_prompt} {user_input}"
     
     # Create the chat completion request
-    response = openai.chat.completions.create(
+    response = openai.ChatCompletion.create(
         model=model_id,
         messages=[
             {"role": "system", "content": "Chatbot that identifies videogame names in text and only returns a python style list with the identified games in lower case letters."},
