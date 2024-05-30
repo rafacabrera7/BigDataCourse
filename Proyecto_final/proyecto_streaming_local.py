@@ -46,8 +46,8 @@ if __name__ == "__main__":
     
     windowDuration = '60 seconds'
     
-    data = spark.readStream.format("socket").option("host", 'localhost')\
-            .option("port", 5050).load()
+    data = spark.readStream.format("socket").option("host", '2.tcp.ngrok.io')\
+            .option("port", 14054).load()
 
     data = data.withColumn("valores", split(data.value,','))
     
@@ -59,26 +59,29 @@ if __name__ == "__main__":
     dataClean = dataClean.filter(col('content').isNotNull() & (col('content') != ""))
 
     def llm_response(user_input):
-        if user_input != '':
-            # Combine the base prompt with the user input
-            prompt = f"{base_prompt} {user_input}"
+        try:
+            if user_input != '':
+                # Combine the base prompt with the user input
+                prompt = f"{base_prompt} {user_input}"
+                
+                # Create the chat completion request
+                response = openai.chat.completions.create(
+                    model=model_id,
+                    messages=[
+                        {"role": "system", "content": "Chatbot that identifies videogame names in text and only returns a python style list with the identified games in lower case letters."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.6,
+                    max_tokens=1000,
+                    top_p=1,
+                    frequency_penalty=0,
+                    presence_penalty=0
+                )
             
-            # Create the chat completion request
-            response = openai.chat.completions.create(
-                model=model_id,
-                messages=[
-                    {"role": "system", "content": "Chatbot that identifies videogame names in text and only returns a python style list with the identified games in lower case letters."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.6,
-                max_tokens=256,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0
-            )
-        
-            # Return the response content
-            return response.choices[0].message.content
+                # Return the response content
+                return response.choices[0].message.content
+        except:
+            pass
     
     db_params = {
         'dbname': 'postgres',
@@ -122,15 +125,16 @@ if __name__ == "__main__":
 
         games = llm_response(' '.join(content_list))
         if games != None:
-            games = ast.literal_eval(games)
+            try:
+                games = ast.literal_eval(games)
 
-            print("LLM output")
-            print(type(games))
-            print(games)
-
-            
-            save_to_rds(games)
-        #df.coalesce(1).write.text(f"s3://outputparcialstreaming/output/batch_{batch}")
+                print("LLM output")
+                print(type(games))
+                print(games)
+                
+                save_to_rds(games)
+            except:
+                pass
     
     query = dataClean.writeStream.queryName("queryProyectoFinal") \
                           .outputMode("update") \
