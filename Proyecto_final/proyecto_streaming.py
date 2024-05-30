@@ -1,4 +1,4 @@
-
+import csv
 import sys, string
 import os
 import socket
@@ -6,6 +6,8 @@ import time
 import operator
 import boto3
 import json
+import psycopg2
+from psycopg2 import sql
 
 from pyspark.sql import SparkSession
 from pyspark.sql.streaming import DataStreamWriter, DataStreamReader
@@ -31,7 +33,7 @@ if __name__ == "__main__":
     windowDuration = '60 seconds'
     
     data = spark.readStream.format("socket").option("host", 'localhost')\
-            .option("port", 5050).load()
+            .option("port", 5432).load()
 
     data = data.withColumn("valores", split(data.value,','))
     
@@ -42,29 +44,51 @@ if __name__ == "__main__":
     
     dataClean = dataClean.filter(col('content').isNotNull() & (col('content') != ""))
 
-    """
+    def llm_response(content_list):
+        games = ['lol', 'csgo', 'minecraft']
+        return games 
     
-    dataClean = data.withColumn('id', data['valores'].getItem(0)) \
-       .withColumn('date', data['valores'].getItem(1)) \
-       .withColumn('likes', data['valores'].getItem(2)) \
-        .drop(data['valores'])\
-        .drop(data['value'])\
+    db_params = {
+        'dbname': 'postgres',
+        'user': 'postgres',
+        'password': 'ferneytupapa',
+        'host': 'proyectobigdata.cbfryhd4vdmu.us-east-1.rds.amazonaws.com',
+        'port': '5432'
+    }
+    
+    def get_rds_connection():
+        try:
+            con = psycopg2.connect(**db_params)
+            return con
+        except Exception as e:
+            print(f"Error connecting to the database: {e}")
+    
+    def save_to_rds(data):
+        try:
+            con = get_rds_connection()
+            cur = con.cursor()
+            
+            for game in data:
+                cur.execute("INSERT INTO juegos (id_juego_mencion, juego) VALUES (default, %s)", (game,))
+            
+            con.commit()
+            cur.close()
+            con.close()
+            print("Data saved to the database successfully.")
+        except Exception as e:
+            print(f"Error saving data to the database: {e}")
 
-    dataClean = dataClean.filter(col('id').rlike('^[0-9]+$'))
-    dataClean = dataClean.withColumn("id", dataClean["id"].cast(IntegerType())) \
-                     .withColumn("likes", dataClean["likes"].cast(IntegerType())) \
-                     .withColumn("date", dataClean["date"].cast(TimestampType()))
-
-    result = dataClean.groupBy(window(dataClean.date, windowDuration, 0)) \
-                  .agg(count("id").alias("count"), sum("likes").alias("total_likes"), avg("likes").alias("avg_likes"))
-    """
     def concatEnCadaBatch(df, batch):
-        df = df.groupby().agg(concat_ws("********************************************",
-                                            collect_list(df.content)))
+        df = df.groupby().agg(concat_ws("",
+                                        collect_list(df.content)).alias("concatenate content"))
 
         df.show(truncate=False)  # This will display the DataFrame in the terminal
+
+        content_list = df.select('concatenate content').rdd.flatMap(lambda x: x).collect()
         #llamadoaLLM(celda)
-        #guardarrespuesta de llamado en S3
+        games = llm_response(content_list)
+
+        save_to_rds(games)
         #df.coalesce(1).write.text(f"s3://outputparcialstreaming/output/batch_{batch}")
     
     query = dataClean.writeStream.queryName("queryProyectoFinal") \
