@@ -1,13 +1,13 @@
 import openai
 
 # Set your API key here or ensure it is set in your environment variables
-api_key = 'sk-proj-JXQPlq4nvDfC2mc6pX7lT3BlbkFJIXNxkEcNz3JXW9PHOCIY'
+api_key = 'API_KEY_HERE_OR_ENV_VAR'
 
 # Initialize the OpenAI client
 openai.api_key = api_key
 
 # Define your model ID (ensure it matches your actual model ID)
-model_id = "ft:gpt-3.5-turbo-0125:personal:proyectobigdata:9UPlgk35"
+model_id = "MODEL_ID_HERE"
 
 # Define the base prompt
 base_prompt = "The input text below is a publication in Reddit from a user. Extract the videogame names mentioned in it. Return only a python style list with the videogames names in lower case as strings items. If you don't find any videogame name, return an empty list. Input text:"
