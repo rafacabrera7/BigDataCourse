@@ -26,13 +26,13 @@ y almacene estos nombres en una base de datos PostgreSQL alojada en AWS RDS.
 """
 
 # Aca configuramos la clave de la API de OpenAI
-api_key = 'sk-proj-JXQPlq4nvDfC2mc6pX7lT3BlbkFJIXNxkEcNz3JXW9PHOCIY'
+api_key = 'API_KEY_HERE_OR_ENV_VAR'
 
 # Inicializamos el cliente de OpenAI
 openai.api_key = api_key
 
 # Definimos el ID del modelo (hay que asegurarse de que coincida con tu ID de modelo real)
-model_id = "ft:gpt-3.5-turbo-0125:personal:proyectobigdata:9UPlgk35"
+model_id = "MODEL_ID_HERE"
 
 # Definimos el prompt base para la extracción de nombres de videojuegos
 base_prompt = "The input text below is a publication in Reddit from a user. Extract the videogame names mentioned in it. Return only a python style list with the videogames names in lower case as strings items. If you don't find any videogame name, return an empty list. Input text:"
